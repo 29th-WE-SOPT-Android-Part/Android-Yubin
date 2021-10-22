@@ -20,7 +20,7 @@ class RepoAdapter : RecyclerView.Adapter<RepoAdapter.RepoViewHolder>() {
         return RepoViewHolder(binding)
     }
 
-    override fun onBindViewHolder(holder: RepoAdapter.RepoViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: RepoViewHolder, position: Int) {
         holder.onBind(repoList[position])
     }
 

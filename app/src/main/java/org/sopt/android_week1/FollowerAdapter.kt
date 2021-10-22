@@ -21,7 +21,7 @@ class FollowerAdapter : RecyclerView.Adapter<FollowerAdapter.FollowerViewHolder>
         return FollowerViewHolder(binding)
     }
 
-    override fun onBindViewHolder(holder: FollowerAdapter.FollowerViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: FollowerViewHolder, position: Int) {
         holder.onBind(followerList[position])
     }
 
