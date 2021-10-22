@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/yb9854/AndroidStudioProjects/Android-Yubin/app/src/main/res/drawable-v24/home_bt_follower_bg.xml" value="0.14375" />
+        <entry key="..\:/Users/yb9854/AndroidStudioProjects/Android-Yubin/app/src/main/res/drawable-v24/home_bt_repo_bg.xml" value="0.14375" />
+        <entry key="..\:/Users/yb9854/AndroidStudioProjects/Android-Yubin/app/src/main/res/drawable-v24/item_bg.xml" value="0.11770833333333333" />
+        <entry key="..\:/Users/yb9854/AndroidStudioProjects/Android-Yubin/app/src/main/res/drawable-v24/item_follower_bg.xml" value="0.2421875" />
+        <entry key="..\:/Users/yb9854/AndroidStudioProjects/Android-Yubin/app/src/main/res/drawable/signin_bt_pink_bg.xml" value="0.11770833333333333" />
+        <entry key="..\:/Users/yb9854/AndroidStudioProjects/Android-Yubin/app/src/main/res/layout/activity_home.xml" value="0.152" />
+        <entry key="..\:/Users/yb9854/AndroidStudioProjects/Android-Yubin/app/src/main/res/layout/activity_sign_in.xml" value="0.1431159420289855" />
+        <entry key="..\:/Users/yb9854/AndroidStudioProjects/Android-Yubin/app/src/main/res/layout/activity_sign_up.xml" value="0.12364130434782608" />
+        <entry key="..\:/Users/yb9854/AndroidStudioProjects/Android-Yubin/app/src/main/res/layout/fragment_follower.xml" value="0.2" />
+        <entry key="..\:/Users/yb9854/AndroidStudioProjects/Android-Yubin/app/src/main/res/layout/fragment_repo.xml" value="0.16" />
+        <entry key="..\:/Users/yb9854/AndroidStudioProjects/Android-Yubin/app/src/main/res/layout/item_follower_list.xml" value="0.264" />
+        <entry key="..\:/Users/yb9854/AndroidStudioProjects/Android-Yubin/app/src/main/res/layout/item_repo_list.xml" value="0.264" />
+      </map>
+    </option>
+  </component>
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

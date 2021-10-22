@@ -21,4 +21,6 @@
     <!--    <string name="home_tv_intro">안녕하세요 안드 yb 최유빈입니다!\n2001년생이고 빠른 년생이라 3학년입니당.\nSOPT 짱\n안드로이드 짱\nSOPT 짱\n안드로이드 짱\nSOPT 짱\n안드로이드 짱\nSOPT 짱\n안드로이드 짱\nSOPT 짱\n안드로이드 짱\nSOPT 짱\n안드로이드 짱\nSOPT 짱\n안드로이드 짱\nSOPT 짱\n안드로이드 짱\nSOPT 짱\n안드로이드 짱\nSOPT 짱\n안드로이드 짱\nSOPT 짱\n안드로이드 짱</string>-->
     <string name="home_bt_follower">팔로워\n목록</string>
     <string name="home_bt_repo">레포지토리\n목록</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
