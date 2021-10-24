@@ -2,7 +2,11 @@
 
 
 ### 1. 실행화면   
-<img width="80%" src="https://user-images.githubusercontent.com/65652094/138455909-d2b68567-539a-4204-a70c-88a7d52f56be.mp4"/>
+ - level1
+<img width="30%" src="https://user-images.githubusercontent.com/65652094/138582284-42c0a673-519d-4853-9fc0-f3b3fb32d16d.gif"/>
+
+ - level2
+<img width="30%" src="https://user-images.githubusercontent.com/65652094/138583328-52c1a5aa-db34-4586-9d2b-7b07e85e13d8.gif"/>
 
 ### 2. 로직 설명
 - **HomeActivity.kt**   
