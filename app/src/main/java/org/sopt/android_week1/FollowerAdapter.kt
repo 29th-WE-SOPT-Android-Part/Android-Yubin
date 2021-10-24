@@ -1,5 +1,6 @@
 package org.sopt.android_week1
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.view.LayoutInflater
 import android.view.MotionEvent
@@ -43,6 +44,7 @@ class FollowerAdapter(private val listener: ItemDragListener) : RecyclerView.Ada
         notifyItemRemoved(position)
     }
 
+    @SuppressLint("ClickableViewAccessibility")
     class FollowerViewHolder(private val binding: ItemFollowerListBinding, listener: ItemDragListener)
         : RecyclerView.ViewHolder(binding.root) {
 
@@ -54,6 +56,7 @@ class FollowerAdapter(private val listener: ItemDragListener) : RecyclerView.Ada
                 false
             }
         }
+
         fun onBind(data : FollowerData) {
             Glide.with(itemView)
                 .load(data.profile)
