@@ -3,10 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/yb9854/AndroidStudioProjects/Android-Yubin/app/src/main/res/layout/activity_home.xml" value="0.221875" />
+        <entry key="..\:/Users/yb9854/AndroidStudioProjects/Android-Yubin/app/src/main/res/layout/activity_detail.xml" value="0.2" />
+        <entry key="..\:/Users/yb9854/AndroidStudioProjects/Android-Yubin/app/src/main/res/layout/activity_home.xml" value="0.2" />
         <entry key="..\:/Users/yb9854/AndroidStudioProjects/Android-Yubin/app/src/main/res/layout/activity_main.xml" value="0.221875" />
         <entry key="..\:/Users/yb9854/AndroidStudioProjects/Android-Yubin/app/src/main/res/layout/activity_sign_in.xml" value="0.221875" />
         <entry key="..\:/Users/yb9854/AndroidStudioProjects/Android-Yubin/app/src/main/res/layout/activity_sign_up.xml" value="0.221875" />
+        <entry key="..\:/Users/yb9854/AndroidStudioProjects/Android-Yubin/app/src/main/res/layout/item_follower_list.xml" value="0.1358695652173913" />
       </map>
     </option>
   </component>

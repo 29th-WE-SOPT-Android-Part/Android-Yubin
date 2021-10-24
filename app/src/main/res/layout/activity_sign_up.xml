@@ -45,7 +45,7 @@
     <EditText
         android:id="@+id/et_name"
         android:layout_width="0dp"
-        android:layout_height="50dp"
+        android:layout_height="wrap_content"
         android:padding="15dp"
         android:gravity="center_vertical"
         android:inputType="textPersonName"
@@ -72,7 +72,7 @@
     <EditText
         android:id="@+id/et_id"
         android:layout_width="0dp"
-        android:layout_height="50dp"
+        android:layout_height="wrap_content"
         android:padding="15dp"
         android:gravity="center_vertical"
         android:inputType="textPersonName"
@@ -98,7 +98,7 @@
     <EditText
         android:id="@+id/et_password"
         android:layout_width="0dp"
-        android:layout_height="50dp"
+        android:layout_height="wrap_content"
         android:padding="15dp"
         android:gravity="center_vertical"
         android:inputType="textPassword"
@@ -114,7 +114,8 @@
         android:id="@+id/bt_signup"
         style="@style/Widget.AppCompat.Button.Borderless"
         android:layout_width="0dp"
-        android:layout_height="60dp"
+        android:layout_height="wrap_content"
+        android:paddingVertical="20dp"
         android:background="@drawable/signin_bt_pink_bg"
         android:text="@string/bt_signup"
         android:textColor="@color/white"

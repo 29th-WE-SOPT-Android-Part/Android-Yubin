@@ -5,9 +5,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="10dp"
-    android:padding="15dp"
-    android:background="@drawable/item_bg" >
+    android:layout_marginHorizontal="10dp"
+    android:layout_marginVertical="5dp"
+    android:padding="15dp" >
 
     <ImageView
         android:id="@+id/iv_follower_profile"

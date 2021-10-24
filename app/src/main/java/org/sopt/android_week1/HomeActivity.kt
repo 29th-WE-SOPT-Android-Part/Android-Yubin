@@ -2,19 +2,19 @@ package org.sopt.android_week1
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import org.sopt.android_week1.databinding.ActivityHomeBinding
 
 class HomeActivity : AppCompatActivity() {
     private lateinit var binding: ActivityHomeBinding
-    private var position = FIRST_POSITION
+    private var position = FOLLOWER_POSITION
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityHomeBinding.inflate(layoutInflater)
-        setContentView(binding.root)
 
         initTransactionEvent()
+
+        setContentView(binding.root)
     }
 
     private fun initTransactionEvent() {
@@ -30,9 +30,9 @@ class HomeActivity : AppCompatActivity() {
         binding.btRepo.setOnClickListener {
             val transaction = supportFragmentManager.beginTransaction()
             when (position) {
-                FIRST_POSITION -> {
+                FOLLOWER_POSITION -> {
                     transaction.replace(R.id.container_home, RepoFragment())
-                    position = SECOND_POSITION
+                    position = REPO_POSITION
                 }
             }
             transaction.commit()
@@ -43,9 +43,9 @@ class HomeActivity : AppCompatActivity() {
         binding.btFollower.setOnClickListener {
             val transaction = supportFragmentManager.beginTransaction()
             when (position) {
-                SECOND_POSITION -> {
+                REPO_POSITION -> {
                     transaction.replace(R.id.container_home, FollowerFragment())
-                    position = FIRST_POSITION
+                    position = FOLLOWER_POSITION
                 }
             }
             transaction.commit()
@@ -53,7 +53,7 @@ class HomeActivity : AppCompatActivity() {
     }
 
     companion object {
-        const val FIRST_POSITION = 1
-        const val SECOND_POSITION = 2
+        const val FOLLOWER_POSITION = 1
+        const val REPO_POSITION = 2
     }
 }

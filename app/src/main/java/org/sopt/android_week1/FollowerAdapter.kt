@@ -1,5 +1,6 @@
 package org.sopt.android_week1
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
@@ -35,6 +36,13 @@ class FollowerAdapter : RecyclerView.Adapter<FollowerAdapter.FollowerViewHolder>
                 .into(binding.ivFollowerProfile)
             binding.tvFollowerName.text = data.name
             binding.tvFollowerIntro.text = data.introduction
+
+            binding.root.setOnClickListener {
+                val intent = Intent(it.context, DetailActivity::class.java)
+                intent.putExtra("profile", data.profile)
+                intent.putExtra("name", data.name)
+                it.context.startActivity(intent)
+            }
         }
     }
 }

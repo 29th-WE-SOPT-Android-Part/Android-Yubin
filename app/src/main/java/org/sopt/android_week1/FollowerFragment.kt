@@ -1,5 +1,6 @@
 package org.sopt.android_week1
 
+import android.graphics.Color
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -17,6 +18,7 @@ class FollowerFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         _binding = FragmentFollowerBinding.inflate(layoutInflater, container, false)
+
         initAdapter()
         return binding.root
     }
@@ -24,6 +26,7 @@ class FollowerFragment : Fragment() {
     private fun initAdapter() {
         followerAdapter = FollowerAdapter()
         binding.rvFollower.adapter = followerAdapter
+        binding.rvFollower.addItemDecoration(FollowerItemDecoration(5, Color.parseColor("#fa79b1")))
         followerAdapter.followerList.addAll(
             listOf(
                 FollowerData(R.drawable.memo_1, "문다빈", "안드로이드 파트장"),
