@@ -6,12 +6,15 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.ItemTouchHelper
+import androidx.recyclerview.widget.RecyclerView
 import org.sopt.android_week1.databinding.FragmentFollowerBinding
 
-class FollowerFragment : Fragment() {
+class FollowerFragment : Fragment(), ItemDragListener {
     private var _binding: FragmentFollowerBinding? = null
     private val binding get() = _binding!!
     private lateinit var followerAdapter: FollowerAdapter
+    private lateinit var itemTouchHelper: ItemTouchHelper
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -20,11 +23,15 @@ class FollowerFragment : Fragment() {
         _binding = FragmentFollowerBinding.inflate(layoutInflater, container, false)
 
         initAdapter()
+
+        itemTouchHelper = ItemTouchHelper(ItemTouchHelperCallback(followerAdapter))
+        itemTouchHelper.attachToRecyclerView(binding.rvFollower)
+
         return binding.root
     }
 
     private fun initAdapter() {
-        followerAdapter = FollowerAdapter()
+        followerAdapter = FollowerAdapter(this)
         binding.rvFollower.adapter = followerAdapter
         binding.rvFollower.addItemDecoration(FollowerItemDecoration(5, Color.parseColor("#fa79b1")))
         followerAdapter.followerList.addAll(
@@ -40,6 +47,9 @@ class FollowerFragment : Fragment() {
         followerAdapter.notifyDataSetChanged()
     }
 
+    override fun onStartDrag(viewHolder: RecyclerView.ViewHolder) {
+        itemTouchHelper.startDrag(viewHolder)
+    }
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null

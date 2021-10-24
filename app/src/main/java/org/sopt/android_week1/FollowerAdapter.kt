@@ -2,12 +2,13 @@ package org.sopt.android_week1
 
 import android.content.Intent
 import android.view.LayoutInflater
+import android.view.MotionEvent
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import org.sopt.android_week1.databinding.ItemFollowerListBinding
 
-class FollowerAdapter : RecyclerView.Adapter<FollowerAdapter.FollowerViewHolder>() {
+class FollowerAdapter(private val listener: ItemDragListener) : RecyclerView.Adapter<FollowerAdapter.FollowerViewHolder>(), ItemActionListener {
     val followerList = mutableListOf<FollowerData>()
 
     override fun onCreateViewHolder(
@@ -19,7 +20,7 @@ class FollowerAdapter : RecyclerView.Adapter<FollowerAdapter.FollowerViewHolder>
             parent, false
         )
 
-        return FollowerViewHolder(binding)
+        return FollowerViewHolder(binding, listener)
     }
 
     override fun onBindViewHolder(holder: FollowerViewHolder, position: Int) {
@@ -28,8 +29,31 @@ class FollowerAdapter : RecyclerView.Adapter<FollowerAdapter.FollowerViewHolder>
 
     override fun getItemCount(): Int = followerList.size
 
-    class FollowerViewHolder(private val binding: ItemFollowerListBinding)
+    override fun onItemMoved(from: Int, to: Int) {
+        if (from == to) {
+            return
+        }
+        val fromItem = followerList.removeAt(from)
+        followerList.add(to, fromItem)
+        notifyItemMoved(from, to)
+    }
+
+    override fun onItemSwiped(position: Int) {
+        followerList.removeAt(position)
+        notifyItemRemoved(position)
+    }
+
+    class FollowerViewHolder(private val binding: ItemFollowerListBinding, listener: ItemDragListener)
         : RecyclerView.ViewHolder(binding.root) {
+
+        init {
+            binding.clItemFollower.setOnTouchListener { v, event ->
+                if (event.action == MotionEvent.ACTION_DOWN) {
+                    listener.onStartDrag(this)
+                }
+                false
+            }
+        }
         fun onBind(data : FollowerData) {
             Glide.with(itemView)
                 .load(data.profile)
