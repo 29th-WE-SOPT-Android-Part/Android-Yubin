@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.ItemTouchHelper
+import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import org.sopt.android_week1.databinding.FragmentFollowerBinding
 
@@ -33,7 +34,8 @@ class FollowerFragment : Fragment(), ItemDragListener {
     private fun initAdapter() {
         followerAdapter = FollowerAdapter(this)
         binding.rvFollower.adapter = followerAdapter
-        binding.rvFollower.addItemDecoration(FollowerItemDecoration(5, Color.parseColor("#fa79b1")))
+        binding.rvFollower.layoutManager = LinearLayoutManager(context)
+        binding.rvFollower.addItemDecoration(RvItemDecoration(5, Color.parseColor("#DDE2E5")))
         followerAdapter.followerList.addAll(
             listOf(
                 FollowerData(R.drawable.memo_1, "문다빈", "안드로이드 파트장"),
@@ -50,6 +52,7 @@ class FollowerFragment : Fragment(), ItemDragListener {
     override fun onStartDrag(viewHolder: RecyclerView.ViewHolder) {
         itemTouchHelper.startDrag(viewHolder)
     }
+
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null

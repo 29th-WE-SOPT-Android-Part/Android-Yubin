@@ -29,8 +29,8 @@ class RepoAdapter : RecyclerView.Adapter<RepoAdapter.RepoViewHolder>() {
     class RepoViewHolder(private val binding: ItemRepoListBinding)
         : RecyclerView.ViewHolder(binding.root) {
         fun onBind(data : RepoData) {
-            binding.tvRepoTitle.text = data.title
-            binding.tvRepoContent.text = data.content
+            binding.tvRepositoryTitle.text = data.title
+            binding.tvRepositoryContent.text = data.content
         }
     }
 }

@@ -6,7 +6,7 @@
         android:right="1dp"
         android:top="1dp">
         <shape android:shape="rectangle" >
-            <stroke android:color="@color/sopt_pink"
+            <stroke android:color="@color/main_pinkpower"
                 android:width="2dp"/>
             <corners android:radius="8dp" />
         </shape>

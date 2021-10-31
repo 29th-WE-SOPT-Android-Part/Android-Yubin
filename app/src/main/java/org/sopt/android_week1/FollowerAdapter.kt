@@ -60,6 +60,7 @@ class FollowerAdapter(private val listener: ItemDragListener) : RecyclerView.Ada
         fun onBind(data : FollowerData) {
             Glide.with(itemView)
                 .load(data.profile)
+                .circleCrop()
                 .into(binding.ivFollowerProfile)
             binding.tvFollowerName.text = data.name
             binding.tvFollowerIntro.text = data.introduction

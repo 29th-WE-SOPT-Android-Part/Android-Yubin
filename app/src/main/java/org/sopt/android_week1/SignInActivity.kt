@@ -40,14 +40,14 @@ class SignInActivity : AppCompatActivity() {
                 Toast.makeText(this, "로그인 실패", Toast.LENGTH_SHORT).show()
             } else {
                 Toast.makeText(this, "${id}님 환영합니다", Toast.LENGTH_SHORT).show()
-                val intent = Intent(this@SignInActivity, HomeActivity::class.java)
+                val intent = Intent(this@SignInActivity, MainActivity::class.java)
                 startActivity(intent)
             }
         }
     }
 
     private fun clickSignUpBtn() {
-        binding.btSignup.setOnClickListener {
+        binding.tvSignUp.setOnClickListener {
             val intent = Intent(this@SignInActivity, SignUpActivity::class.java)
             signUpActivityLauncher.launch(intent)
         }
