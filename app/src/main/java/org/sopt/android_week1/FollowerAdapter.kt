@@ -58,12 +58,9 @@ class FollowerAdapter(private val listener: ItemDragListener) : RecyclerView.Ada
         }
 
         fun onBind(data : FollowerData) {
-            Glide.with(itemView)
-                .load(data.profile)
-                .circleCrop()
-                .into(binding.ivFollowerProfile)
-            binding.tvFollowerName.text = data.name
-            binding.tvFollowerIntro.text = data.introduction
+            with(binding) {
+                followerViewModel = data
+            }
 
             binding.root.setOnClickListener {
                 val intent = Intent(it.context, DetailActivity::class.java)

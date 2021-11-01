@@ -36,14 +36,15 @@ class FollowerFragment : Fragment(), ItemDragListener {
         binding.rvFollower.adapter = followerAdapter
         binding.rvFollower.layoutManager = LinearLayoutManager(context)
         binding.rvFollower.addItemDecoration(RvItemDecoration(5, Color.parseColor("#DDE2E5")))
+
         followerAdapter.followerList.addAll(
             listOf(
-                FollowerData(R.drawable.memo_1, "문다빈", "안드로이드 파트장"),
-                FollowerData(R.drawable.memo_3, "김현아", "기획 파트장"),
-                FollowerData(R.drawable.memo_4, "이성현", "디자인 파트장"),
-                FollowerData(R.drawable.memo_2, "장혜령", "ios 파트장"),
-                FollowerData(R.drawable.memo_1, "김의진", "웹 파트장"),
-                FollowerData(R.drawable.memo_3, "김우영", "서버 파트장"),
+                FollowerData("https://i.pinimg.com/564x/79/2a/b9/792ab9d9c0312b21912e91d9e09deef7.jpg", "문다빈", "안드로이드 파트장"),
+                FollowerData("https://i.pinimg.com/236x/74/87/ad/7487ade70b50f76d44540d2fe1faf885.jpg", "김현아", "기획 파트장"),
+                FollowerData("https://i.pinimg.com/236x/16/0e/90/160e90ad6aded4c8d8ca4510b207ad20.jpg", "이성현", "디자인 파트장"),
+                FollowerData("https://i.pinimg.com/236x/c0/ef/17/c0ef1718a2b0e68a43ddaf262272228c.jpg", "장혜령", "ios 파트장"),
+                FollowerData("https://i.pinimg.com/564x/79/2a/b9/792ab9d9c0312b21912e91d9e09deef7.jpg", "김의진", "웹 파트장"),
+                FollowerData("https://i.pinimg.com/236x/74/87/ad/7487ade70b50f76d44540d2fe1faf885.jpg", "김우영", "서버 파트장"),
             )
         )
         followerAdapter.notifyDataSetChanged()
