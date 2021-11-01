@@ -1,6 +1,5 @@
 package org.sopt.android_week1
 
-import android.net.Uri
 import android.widget.ImageView
 import androidx.databinding.BindingAdapter
 import com.bumptech.glide.Glide

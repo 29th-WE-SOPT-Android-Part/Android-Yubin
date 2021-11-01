@@ -20,7 +20,7 @@ class DetailActivity : AppCompatActivity() {
 
     private fun initProfile() {
         intent?.let {
-            val profile = it.getIntExtra("profile", R.drawable.memo_1)
+            val profile = it.getStringExtra("profile")
             Glide.with(this)
                 .load(profile)
                 .into(binding.ivProfile)
