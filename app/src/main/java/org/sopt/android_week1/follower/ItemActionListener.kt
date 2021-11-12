@@ -1,4 +1,4 @@
-package org.sopt.android_week1
+package org.sopt.android_week1.follower
 
 interface ItemActionListener {
     fun onItemMoved(from: Int, to: Int)

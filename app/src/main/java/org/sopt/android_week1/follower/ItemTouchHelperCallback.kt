@@ -1,7 +1,8 @@
-package org.sopt.android_week1
+package org.sopt.android_week1.follower
 
 import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.RecyclerView
+import org.sopt.android_week1.follower.ItemActionListener
 
 class ItemTouchHelperCallback(private val listener: ItemActionListener) : ItemTouchHelper.Callback() {
 

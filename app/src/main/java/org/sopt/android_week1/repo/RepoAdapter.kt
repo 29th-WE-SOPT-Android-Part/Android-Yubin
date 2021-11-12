@@ -1,4 +1,4 @@
-package org.sopt.android_week1
+package org.sopt.android_week1.repo
 
 import android.view.LayoutInflater
 import android.view.ViewGroup

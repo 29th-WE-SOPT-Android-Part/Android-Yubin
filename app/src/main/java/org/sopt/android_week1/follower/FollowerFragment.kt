@@ -1,4 +1,4 @@
-package org.sopt.android_week1
+package org.sopt.android_week1.follower
 
 import android.graphics.Color
 import android.os.Bundle
@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import org.sopt.android_week1.RvItemDecoration
 import org.sopt.android_week1.databinding.FragmentFollowerBinding
 
 class FollowerFragment : Fragment(), ItemDragListener {
