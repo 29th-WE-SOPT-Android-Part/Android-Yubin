@@ -24,6 +24,7 @@ class SignInActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivitySignInBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
         clickLoginBtn()
         clickSignUpBtn()
@@ -32,6 +33,10 @@ class SignInActivity : AppCompatActivity() {
     }
 
     private fun clickLoginBtn() {
+        clickLogin()
+    }
+
+    private fun clickLogin() {
         binding.btLogin.setOnClickListener {
             val id = binding.etId.text
             val pw = binding.etPassword.text
