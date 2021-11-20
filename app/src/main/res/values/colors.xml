@@ -8,7 +8,11 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
-    <color name="sopt_pink">#FF70B8</color>
-    <color name="sopt_darkgray">#0F0F0F</color>
-    <color name="sopt_gray">#6E6E6E</color>
+    <color name="sopt_pink">#FA79B0</color>
+    <color name="sopt_gray1">#333333</color>
+    <color name="sopt_gray3">#828282</color>
+    <color name="sopt_gray6">#F2F2F2</color>
+    <color name="main_pinkpower">#F658A6</color>
+    <color name="main_pinkpop">#FA79B0</color>
+    <color name="main_orange">#FAB24C</color>
 </resources>

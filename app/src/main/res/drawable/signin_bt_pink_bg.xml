@@ -6,9 +6,9 @@
         android:right="1dp"
         android:top="1dp">
         <shape android:shape="rectangle" >
-            <stroke android:color="@color/sopt_pink"
+            <stroke android:color="@color/main_pinkpower"
                 android:width="2dp"/>
-            <solid android:color="@color/sopt_pink" />
+            <solid android:color="@color/main_pinkpower" />
             <corners android:radius="5dp" />
         </shape>
     </item>

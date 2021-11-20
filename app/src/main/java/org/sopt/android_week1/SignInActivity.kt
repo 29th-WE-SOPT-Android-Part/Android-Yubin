@@ -24,13 +24,14 @@ class SignInActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivitySignInBinding.inflate(layoutInflater)
-        setContentView(binding.root)
 
-        clickLogin()
-        clickSignUp()
+        clickLoginBtn()
+        clickSignUpBtn()
+
+        setContentView(binding.root)
     }
 
-    private fun clickLogin() {
+    private fun clickLoginBtn() {
         binding.btLogin.setOnClickListener {
             val id = binding.etId.text
             val pw = binding.etPassword.text
@@ -39,14 +40,14 @@ class SignInActivity : AppCompatActivity() {
                 Toast.makeText(this, "로그인 실패", Toast.LENGTH_SHORT).show()
             } else {
                 Toast.makeText(this, "${id}님 환영합니다", Toast.LENGTH_SHORT).show()
-                val intent = Intent(this@SignInActivity, HomeActivity::class.java)
+                val intent = Intent(this@SignInActivity, MainActivity::class.java)
                 startActivity(intent)
             }
         }
     }
 
-    private fun clickSignUp() {
-        binding.btSignup.setOnClickListener {
+    private fun clickSignUpBtn() {
+        binding.tvSignUp.setOnClickListener {
             val intent = Intent(this@SignInActivity, SignUpActivity::class.java)
             signUpActivityLauncher.launch(intent)
         }
