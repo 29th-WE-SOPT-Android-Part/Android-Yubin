@@ -12,7 +12,7 @@ interface LoginService {
     @POST("user/login")
     fun postLogin(
         @Body body : RequestLoginData
-    ) : Call<ResponseLoginData>
+    ) : Call<ResponseWrapper<ResponseLoginData>>
 
     @Headers("Content-Type:application/json")
     @POST("user/signup")

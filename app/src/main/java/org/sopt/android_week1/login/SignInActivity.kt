@@ -56,23 +56,23 @@ class SignInActivity : AppCompatActivity() {
             password = binding.etPassword.text.toString()
         )
 
-        val call: Call<ResponseLoginData> = ServiceCreator.loginService.postLogin(requestLoginData)
+        val call: Call<ResponseWrapper<ResponseLoginData>> = ServiceCreator.loginService.postLogin(requestLoginData)
 
-        call.enqueue(object: Callback<ResponseLoginData> {
+        call.enqueue(object: Callback<ResponseWrapper<ResponseLoginData>> {
             override fun onResponse(
-                call: Call<ResponseLoginData>,
-                response: Response<ResponseLoginData>
+                call: Call<ResponseWrapper<ResponseLoginData>>,
+                response: Response<ResponseWrapper<ResponseLoginData>>
             ) {
                 if (response.isSuccessful) {
                     val data = response.body()?.data
 
-                    Toast.makeText(this@SignInActivity, "${data?.id}님 반갑습니다!", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this@SignInActivity, "${data?.name}님 반갑습니다!", Toast.LENGTH_SHORT).show()
                     startActivity(Intent(this@SignInActivity, MainActivity::class.java))
                 } else
                     Toast.makeText(this@SignInActivity, "로그인에 실패하였습니다", Toast.LENGTH_SHORT).show()
             }
 
-            override fun onFailure(call: Call<ResponseLoginData>, t: Throwable) {
+            override fun onFailure(call: Call<ResponseWrapper<ResponseLoginData>>, t: Throwable) {
                 Log.e("NetworkText", "error:$t")
             }
         })
