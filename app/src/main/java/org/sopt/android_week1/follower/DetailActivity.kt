@@ -1,8 +1,9 @@
-package org.sopt.android_week1
+package org.sopt.android_week1.follower
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.bumptech.glide.Glide
+import org.sopt.android_week1.R
 import org.sopt.android_week1.databinding.ActivityDetailBinding
 
 class DetailActivity : AppCompatActivity() {

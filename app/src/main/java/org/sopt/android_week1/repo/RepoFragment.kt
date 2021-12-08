@@ -1,4 +1,4 @@
-package org.sopt.android_week1
+package org.sopt.android_week1.repo
 
 import android.graphics.Color
 import android.os.Bundle
@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
+import org.sopt.android_week1.RvItemDecoration
 import org.sopt.android_week1.databinding.FragmentRepoBinding
 
 

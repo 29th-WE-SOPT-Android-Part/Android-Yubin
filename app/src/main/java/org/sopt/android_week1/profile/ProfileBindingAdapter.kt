@@ -1,4 +1,4 @@
-package org.sopt.android_week1
+package org.sopt.android_week1.profile
 
 import android.widget.ImageView
 import androidx.databinding.BindingAdapter

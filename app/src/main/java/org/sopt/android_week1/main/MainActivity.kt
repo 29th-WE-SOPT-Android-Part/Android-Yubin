@@ -1,9 +1,13 @@
-package org.sopt.android_week1
+package org.sopt.android_week1.main
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.viewpager2.widget.ViewPager2
+import org.sopt.android_week1.camera.CameraFragment
+import org.sopt.android_week1.follower.ProfileFragment
+import org.sopt.android_week1.R
 import org.sopt.android_week1.databinding.ActivityMainBinding
+import org.sopt.android_week1.home.HomeFragment
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding

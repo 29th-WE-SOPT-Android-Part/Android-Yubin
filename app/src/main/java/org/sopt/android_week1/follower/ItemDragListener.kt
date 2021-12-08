@@ -1,4 +1,4 @@
-package org.sopt.android_week1
+package org.sopt.android_week1.follower
 
 import androidx.recyclerview.widget.RecyclerView
 

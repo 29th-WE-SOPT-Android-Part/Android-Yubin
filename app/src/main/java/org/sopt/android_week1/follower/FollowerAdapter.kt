@@ -1,4 +1,4 @@
-package org.sopt.android_week1
+package org.sopt.android_week1.follower
 
 import android.annotation.SuppressLint
 import android.content.Intent
@@ -6,10 +6,10 @@ import android.view.LayoutInflater
 import android.view.MotionEvent
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.bumptech.glide.Glide
 import org.sopt.android_week1.databinding.ItemFollowerListBinding
 
-class FollowerAdapter(private val listener: ItemDragListener) : RecyclerView.Adapter<FollowerAdapter.FollowerViewHolder>(), ItemActionListener {
+class FollowerAdapter(private val listener: ItemDragListener) : RecyclerView.Adapter<FollowerAdapter.FollowerViewHolder>(),
+    ItemActionListener {
     val followerList = mutableListOf<FollowerData>()
 
     override fun onCreateViewHolder(
