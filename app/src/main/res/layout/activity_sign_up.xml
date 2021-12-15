@@ -124,7 +124,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:paddingVertical="12dp"
-        android:background="@drawable/signin_bt_pink_bg"
+        android:background="@drawable/bt_pink_bg"
         android:text="@string/signup_text"
         android:textSize="15sp"
         android:textColor="@color/white"

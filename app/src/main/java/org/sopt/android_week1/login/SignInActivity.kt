@@ -10,6 +10,8 @@ import androidx.activity.result.contract.ActivityResultContracts
 import org.sopt.android_week1.signup.SignUpActivity
 import org.sopt.android_week1.databinding.ActivitySignInBinding
 import org.sopt.android_week1.main.MainActivity
+import org.sopt.android_week1.util.SOPTSharedPreferences
+import org.sopt.android_week1.util.Util.shortToast
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -31,10 +33,28 @@ class SignInActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivitySignInBinding.inflate(layoutInflater)
 
+        initClickEvent()
+        isAutoLogin()
         clickLoginBtn()
         clickSignUpBtn()
 
         setContentView(binding.root)
+    }
+
+    private fun initClickEvent() {
+        binding.ibCheck.setOnClickListener {
+            binding.ibCheck.isSelected = !binding.ibCheck.isSelected
+
+            SOPTSharedPreferences.setAutoLogin(this, binding.ibCheck.isSelected)
+        }
+    }
+
+    private fun isAutoLogin() {
+        if(SOPTSharedPreferences.getAutoLogin(this)) {
+            shortToast("자동로그인 되었습니다")
+            startActivity(Intent(this@SignInActivity, MainActivity::class.java))
+            finish()
+        }
     }
 
     private fun clickLoginBtn() {
