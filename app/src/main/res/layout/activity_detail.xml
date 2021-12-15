@@ -87,7 +87,7 @@
         android:layout_marginBottom="30dp"
         android:layout_marginHorizontal="25dp"
         android:padding="30dp"
-        tools:text="상세 설명~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+        tools:text="상세 설명~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
         android:textSize="18sp"
         android:textColor="@color/sopt_gray1"
         android:background="@drawable/item_bg"
