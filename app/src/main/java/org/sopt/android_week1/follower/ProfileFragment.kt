@@ -1,5 +1,6 @@
 package org.sopt.android_week1.follower
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -23,9 +24,16 @@ class ProfileFragment : Fragment() {
 
         initProfile()
         initTransactionEvent()
+        clickBtnSetting()
+
         return binding.root
     }
 
+    private fun clickBtnSetting() {
+        binding.ibSetting.setOnClickListener {
+            startActivity(Intent(requireActivity(), SettingActivity::class.java))
+        }
+    }
     private fun initProfile() {
         Glide.with(this)
             .load(R.drawable.profile)

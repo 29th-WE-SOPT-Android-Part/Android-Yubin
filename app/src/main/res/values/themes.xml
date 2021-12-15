@@ -2,8 +2,8 @@
     <!-- Base application theme. -->Theme.AppCompat.DayNight.NoActionBar
     <style name="Theme.Android_week1" parent="Theme.AppCompat.DayNight.NoActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/sopt_pink</item>
-        <item name="colorPrimaryVariant">@color/sopt_pink</item>
+        <item name="colorPrimary">@color/main_pinkpower</item>
+        <item name="colorPrimaryVariant">@color/sopt_gray3</item>
         <item name="colorOnPrimary">@color/white</item>
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/teal_200</item>

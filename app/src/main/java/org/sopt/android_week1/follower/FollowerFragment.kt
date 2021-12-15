@@ -25,10 +25,7 @@ class FollowerFragment : Fragment(), ItemDragListener {
         _binding = FragmentFollowerBinding.inflate(layoutInflater, container, false)
 
         initAdapter()
-
-        itemTouchHelper = ItemTouchHelper(ItemTouchHelperCallback(followerAdapter))
-        itemTouchHelper.attachToRecyclerView(binding.rvFollower)
-
+        initItemTouchHelper()
         return binding.root
     }
 
@@ -49,6 +46,11 @@ class FollowerFragment : Fragment(), ItemDragListener {
             )
         )
         followerAdapter.notifyDataSetChanged()
+    }
+
+    private fun initItemTouchHelper() {
+        itemTouchHelper = ItemTouchHelper(ItemTouchHelperCallback(followerAdapter))
+        itemTouchHelper.attachToRecyclerView(binding.rvFollower)
     }
 
     override fun onStartDrag(viewHolder: RecyclerView.ViewHolder) {

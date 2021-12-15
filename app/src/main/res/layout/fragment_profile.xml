@@ -14,12 +14,13 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:layout_editor_absoluteX="0dp">
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/icon_setting_2_white"
-            android:layout_marginTop="10dp"
+        <ImageButton
+            android:id="@+id/ib_setting"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@drawable/icon_setting_2_white"
             android:layout_marginEnd="10dp"
+            android:layout_marginTop="10dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
