@@ -7,7 +7,7 @@
     <data>
         <variable
             name="followerViewModel"
-            type="org.sopt.android_week1.follower.FollowerData" />
+            type="org.sopt.android_week1.data.local.FollowerData" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

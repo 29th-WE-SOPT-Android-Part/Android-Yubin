@@ -13,10 +13,10 @@
         android:theme="@style/Theme.Android_week1"
         android:usesCleartextTraffic="true">
         <activity
-            android:name=".follower.SettingActivity"
+            android:name="org.sopt.android_week1.ui.main.follower.SettingActivity"
             android:exported="true" />
         <activity
-            android:name=".onboarding.OnBoardingActivity"
+            android:name="org.sopt.android_week1.ui.onboarding.OnBoardingActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -25,16 +25,16 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".follower.DetailActivity"
+            android:name="org.sopt.android_week1.ui.main.follower.DetailActivity"
             android:exported="true" />
         <activity
-            android:name=".main.MainActivity"
+            android:name="org.sopt.android_week1.ui.main.MainActivity"
             android:exported="true" />
         <activity
-            android:name=".signup.SignUpActivity"
+            android:name=".ui.SignUpActivity"
             android:exported="true" />
         <activity
-            android:name=".login.SignInActivity"
+            android:name=".ui.SignInActivity"
             android:exported="true" />
     </application>
 
