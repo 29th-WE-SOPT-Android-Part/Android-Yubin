@@ -9,7 +9,7 @@
         android:id="@+id/onBoardingFragment1"
         android:name="org.sopt.android_week1.onboarding.OnBoardingFragment1"
         android:label="fragment_on_boarding1"
-        tools:layout="@layout/fragment_on_boarding1" >
+        tools:layout="@layout/fragment_on_boarding1">
         <action
             android:id="@+id/action_onBoardingFragment1_to_onBoardingFragment2"
             app:destination="@id/onBoardingFragment2" />
@@ -18,7 +18,7 @@
         android:id="@+id/onBoardingFragment2"
         android:name="org.sopt.android_week1.onboarding.OnBoardingFragment2"
         android:label="fragment_on_boarding2"
-        tools:layout="@layout/fragment_on_boarding2" >
+        tools:layout="@layout/fragment_on_boarding2">
         <action
             android:id="@+id/action_onBoardingFragment2_to_onBoardingFragment3"
             app:destination="@id/onBoardingFragment3" />
@@ -27,5 +27,11 @@
         android:id="@+id/onBoardingFragment3"
         android:name="org.sopt.android_week1.onboarding.OnBoardingFragment3"
         android:label="fragment_on_boarding3"
-        tools:layout="@layout/fragment_on_boarding3" />
+        tools:layout="@layout/fragment_on_boarding3" >
+        <action
+            android:id="@+id/action_onBoardingFragment3_to_onBoardingFragment1"
+            app:destination="@id/onBoardingFragment1"
+            app:popUpTo="@+id/onBoardingFragment1"
+            app:popUpToInclusive="true"/>
+    </fragment>
 </navigation>
