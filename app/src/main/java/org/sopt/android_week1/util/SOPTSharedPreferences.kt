@@ -1,7 +1,6 @@
 package org.sopt.android_week1.util
 
 import android.content.Context
-import android.content.SharedPreferences
 
 object SOPTSharedPreferences {
     private const val STORAGE_KEY = "USER_AUTH"
