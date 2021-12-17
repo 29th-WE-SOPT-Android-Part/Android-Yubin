@@ -13,11 +13,12 @@ class SettingActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
         binding = ActivitySettingBinding.inflate(layoutInflater)
+
         initSwitch()
         clickSwitch()
         clickBtnBack()
+
         setContentView(binding.root)
     }
 
@@ -26,8 +27,11 @@ class SettingActivity : AppCompatActivity() {
     }
 
     private fun clickSwitch() {
-        binding.switchAutoLogin.setOnClickListener {
-            SOPTSharedPreferences.setAutoLogin(this, binding.switchAutoLogin.isSelected)
+        val switch = binding.switchAutoLogin
+        switch.setOnClickListener {
+            SOPTSharedPreferences.setAutoLogin(this, switch.isSelected)
+            if (!switch.isSelected)
+                SOPTSharedPreferences.removeAutoLogin(this)
         }
     }
 

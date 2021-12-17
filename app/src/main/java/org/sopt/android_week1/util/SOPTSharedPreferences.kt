@@ -1,6 +1,7 @@
 package org.sopt.android_week1.util
 
 import android.content.Context
+import android.content.SharedPreferences
 
 object SOPTSharedPreferences {
     private const val STORAGE_KEY = "USER_AUTH"
@@ -22,13 +23,6 @@ object SOPTSharedPreferences {
         val preferences = context.getSharedPreferences(STORAGE_KEY, Context.MODE_PRIVATE)
         preferences.edit()
             .remove(AUTO_LOGIN)
-            .apply()
-    }
-
-    fun clearStorage(context: Context) {
-        val preferences = context.getSharedPreferences(STORAGE_KEY, Context.MODE_PRIVATE)
-        preferences.edit()
-            .clear()
             .apply()
     }
 }
